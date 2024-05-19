@@ -16,4 +16,5 @@ const array = [
 
 console.log(array.filter((arr)=>{
  return arr != null && arr != '' && arr != 'ss'
-}));
+}));  
+ 
