@@ -1,0 +1,14 @@
+function convertToEasternArabic(numberString) {
+    const westernArabic = ['0','1','2','3','4','5','6','7','8','9'];
+    const easternArabic = ['٠','١','٢','٣','٤','٥','٦','٧','٨','٩'];
+    
+    for (let i = 0; i < westernArabic.length; i++) {
+        const regex = new RegExp(westernArabic[i], 'g');
+        numberString = numberString.replace(regex, easternArabic[i]);
+    }
+    
+    return numberString;
+}
+const westernDate = '2024/04/16';
+const easternDate = convertToEasternArabic(westernDate);
+document.getElementById('dob').textContent = easternDate;
